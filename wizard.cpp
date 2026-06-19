@@ -1,4 +1,4 @@
-#include "Wizard.h"
+#include "wizard.h"
 #include <cstdlib>
 
 // Less HP, more potions, stronger magic

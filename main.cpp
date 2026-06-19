@@ -2,12 +2,13 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <memory>
 
 // custom headers
-#include "Player.h"
-#include "Wizard.h"
-#include "Knight.h"
-#include "Enemy.h"
+#include "player.h"
+#include "wizard.h"
+#include "knight.h"
+#include "enemy.h"
 
 using namespace std;
 
@@ -44,13 +45,13 @@ int main() {
     cout << "Enter your hero's name: ";
     cin >> pName;
 
-    Player* player = nullptr;
+    std::unique_ptr<Player> player;
 
     if (choice == 1) {
-        player = new Wizard(pName);
+        player = std::make_unique<Wizard>(pName);
         cout << "\nA powerful Wizard " << pName << " enters the arena!\n";
     } else {
-        player = new Knight(pName);
+        player = std::make_unique<Knight>(pName);
         cout << "\nA mighty Knight " << pName << " enters the arena!\n";
     }
 
@@ -115,6 +116,5 @@ int main() {
     cout << "Total Rooms Cleared: " << roomsCleared << "\n";
     cout << "========================================\n";
 
-    delete player;
     return 0;
 }

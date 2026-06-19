@@ -1,4 +1,4 @@
-#include "Knight.h"
+#include "knight.h"
 #include <cstdlib>
 
 // Takes more damage, and has fewer potions. Damage is more consistent, but lower on average than the wizard.

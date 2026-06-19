@@ -1,4 +1,5 @@
 I wasn't able to implement this code into my final project. I ran out of time. 
+It would have made me add 2 attacks and a taunt. 
 
 std::cout << "=== BATTLE ARENA ===\n";
     enemy->TauntPlayer();      
@@ -17,11 +18,11 @@ for the player and classes for the enemy.
 
 we need to create header files. we need to create a main file for enemy and player. 
 
-we need to create a battle simulator. we can copy the code from lab 3  and edit it. 
+we need to create a battle simulator. we can copy the code from lab 3 and edit it. 
 
 remember to make a youtube video. 
 
-here's the code i used before adding the header files, which was based on lab3:
+here's the code i wrote before adding the header files, which was based on lab3. the code is very similar:
 
 #include <iostream>
 #include <string>
@@ -210,7 +211,7 @@ int main() {
 
             if (rand() % 4 == 0) {   // 25% chance
                 player->potions++;
-                cout << "*** You found a potion! (+1) ***\n";
+                cout << "*** You found a potion!***\n";
             }
         }
     }
